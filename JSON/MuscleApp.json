@@ -1,0 +1,72 @@
+{
+  "name": "MUSCLE",
+  "label": "MUSCLE",
+  "shortDescription": " MUltiple Sequence Comparison by Log- Expectation",
+  "longDescription": "MUSCLE is claimed to achieve both better average accuracy and better speed than other softwares, depending on the chosen optios.",
+  "helpURI": "http://drive5.com/muscle/",
+  "datePublished": "",
+  "author":"Alice Minotto",
+  "version": "0.0.0",
+  "deploymentSystem": "cyverseUK-Storage2",
+  "deploymentPath": "/mnt/data/apps/muscle",
+  "executionSystem": "cyverseUK-Batch2",
+  "executionType": "CLI",
+  "parallelism": "SERIAL",
+  "templatePath": "wrapper.sh",
+  "testPath": "test.sh",
+  "ontology": [ "http://edamontology.org/operation_0496",
+    "http://edamontology.org/operation_0495",
+    "http://edamontology.org/operation_0492",
+    "http://edamontology.org/operation_0491",
+    "" ],
+  "tags": [ "CyverseUK" ],
+  "inputs": [
+    {"id": "input_file",
+    "value": {
+      "required": true,
+      "default": ""
+    },
+    "details": {
+      "label": "Input File",
+      "showArgument": false
+    },
+    "semantics": {
+      "maxCardinality": 1
+    }}
+    ],
+
+
+  "parameters": [
+    {"id": "diags",
+    "value": {
+      "type": "flag",
+      "visible": true
+      },
+    "details": {
+      "label": "Find diagonals",
+      "description": "faster for similar sequences",
+      "showArgument": true,
+      "argument": "-diags "
+      }},
+    {"id": "format",
+      "value": {
+        "type": "enumeration",
+        "visible": true,
+        "enumValues": [
+          {"": "FASTA"},
+          {"-html ": "HTML"},
+          {"-msf ":"GCG MSF"},
+          {"-clw ":"CLUSTALW"},
+          {"-clwstrict ":"CLUSTALW with CLUSTALW 1.81 header"},
+          {"-phys ":"PHYLIP sequential format"},
+          {"-phyi ":"PHYLIP interleaved format"}
+        ],
+        "default": ""
+      },
+      "details": {
+        "label": "Output format",
+        "showArgument": false
+      }
+    }
+]
+}

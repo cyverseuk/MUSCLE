@@ -1,0 +1,10 @@
+{
+  "name" : "MUSCLE",
+  "appId" : "MUSCLE-0.0.0",
+  "archive" : false,
+  "inputs": {
+    "input_file" :  "http://de.cyverse.org/dl/d/DE0E0A4E-D803-4642-B5D2-0AE9F2E78604/test_reference.fa"
+  },
+  "parameters" : {
+  }
+}
